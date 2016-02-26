@@ -1,0 +1,36 @@
+{
+    "name": "stenyo/yii2-ckeditor-kcfinder",
+    "description": "CKEditor + KCFinder for Yii 2",
+    "keywords": ["yii2", "ckeditor", "kcfinder", "filebrowser", "WYSIWYG", "widget"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "support": {
+        "source": "https://github.com/Stenyo/yii2-ckeditor-kcfinder",
+        "issues": "https://github.com/Stenyo/yii2-ckeditor-kcfinder/issues"
+    },
+    "authors": [
+        {
+            "name": "MadAnd",
+            "email": "dev@madand.net",
+            "homepage": "https://github.com/MadAnd",
+            "role": "Developer"
+        },
+        {
+            "name": "Stenyo",
+            "email": "stenyo@parallaxsolutions.com.br",
+            "homepage": "https://www.parallaxsolutions.com.br",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "stenyo\\ckeditor\\": ""
+        }
+    },
+    "require": {
+        "yiisoft/yii2": "*",
+        "ckeditor/ckeditor": "dev-full/4.4.x",
+        "sunhater/kcfinder": "dev-master",
+        "yiisoft/yii2-bootstrap": "*"
+    }
+}

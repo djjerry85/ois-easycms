@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /landshaftnyj-dizajn-kotedzha
+Disallow: /rekonstrukcija-sada
+Disallow: /ozelenenie-interyera
+Disallow: /uhod-za-sadom
+Disallow: /landshaftnyj-dizajn-dacha
+Disallow: /contacts
+Disallow: /proekty
+Disallow: /proekty/
+Disallow: /news
+Disallow: /news/
+Disallow: /ceny
+Disallow: /ceny/
+Disallow: /ozelenenie
+Disallow: /ozelenenie/
