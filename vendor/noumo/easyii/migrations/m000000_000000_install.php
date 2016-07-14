@@ -215,6 +215,20 @@ class m000000_000000_install extends \yii\db\Migration
         ], $this->engine);
         $this->createIndex('slug', gallery\models\Category::tableName(), 'slug', true);
 
+        $this->createTable(gallery\models\Category::tableName().'_lang', [
+            'id' => 'pk',
+            'category_id' => Schema::TYPE_INTEGER,
+            'language' => Schema::TYPE_STRING . '(6) NOT NULL',
+            'title' => Schema::TYPE_STRING . '(255) NOT NULL',
+            'seo_title' => Schema::TYPE_STRING . '(255) DEFAULT NULL',
+            'seo_description' => Schema::TYPE_STRING . '(255) DEFAULT NULL',
+            'seo_keywords' => Schema::TYPE_STRING . '(255) DEFAULT NULL',
+            'seo_h1' => Schema::TYPE_STRING . '(255) DEFAULT NULL',
+        ], $this->engine);
+        $this->createIndex('category_id', gallery\models\Category::tableName().'_lang', 'category_id');
+        $this->createIndex('language', gallery\models\Category::tableName().'_lang', 'language');
+
+
         //GUESTBOOK MODULE
         $this->createTable(Guestbook::tableName(), [
             'guestbook_id' => 'pk',
@@ -242,6 +256,19 @@ class m000000_000000_install extends \yii\db\Migration
             'status' => Schema::TYPE_BOOLEAN . " DEFAULT '1'"
         ], $this->engine);
         $this->createIndex('slug', News::tableName(), 'slug', true);
+
+        CREATE TABLE `easyii_news_lang` (
+    `id` int(11) NOT NULL,
+  `news_id` int(11) NOT NULL,
+  `language` varchar(6) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `short` text NOT NULL,
+  `text` text NOT NULL,
+  `seo_title` varchar(255) DEFAULT NULL,
+  `seo_description` varchar(255) DEFAULT NULL,
+  `seo_keywords` varchar(255) DEFAULT NULL,
+  `seo_h1` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
         //Price MODULE
         $this->createTable(Price::tableName(), [
